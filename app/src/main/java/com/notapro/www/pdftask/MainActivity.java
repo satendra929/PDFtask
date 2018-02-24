@@ -1,10 +1,14 @@
 package com.notapro.www.pdftask;
 
+import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         tvDetails = (TextView) findViewById(R.id.TVDetails);
         tv.setText("Candidate: Satendra Varma Email: satvarma@iu.edu Message: Task Complete :)");
         tvDetails.setText("Please find the populated Excel sheet in test folder in internal storage." +
-                "Kindly allow pdf scraping to run for 7-10secs before opening the file. ThankYou.");
+                "Kindly allow pdf scraping to run for 7-10secs before opening the file.ThankYou.");
 
 
         //Setting up a writable excel sheet
